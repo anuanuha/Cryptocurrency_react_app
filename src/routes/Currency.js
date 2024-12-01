@@ -11,14 +11,6 @@ export const Currency = () => {
     rank: "",
     price_usd: "",
     price_btc: "",
-    percent_change_24h: "",
-    percent_change_1h: "",
-    percent_change_7d: "",
-    market_cap_usd: "",
-    volume24: "",
-    volume24a: "",
-    csupply: "",
-    tsupply: "",
    
   });
 
@@ -32,14 +24,7 @@ export const Currency = () => {
           rank: data.rank,
           price_usd: data.price_usd,
           price_btc: data.price_btc,
-          percent_change_24h: data.percent_change_24h,
-          percent_change_1h: data.percent_change_1h,
-          percent_change_7d: data.percent_change_7d,
-          market_cap_usd: data.market_cap_usd,
-          volume24: data.volume24,
-          volume24a: data.volume24a,
-          csupply: data.csupply,
-          tsupply: data.tsupply,
+     
          
         });
       })
@@ -47,9 +32,6 @@ export const Currency = () => {
         console.error("Error fetching currency data:", error);
       });
   }, [id]);
-
-  const changeClass =
-    coin.percent_change_24h >= 0 ? "highlight" : "negative";
 
   return (
     <div className="container">
@@ -68,18 +50,6 @@ export const Currency = () => {
       </p>
       <p className="info">
         <span>Price (BTC):</span> {coin.price_btc}
-      </p>
-      <p className={`info ${changeClass}`}>
-        <span>24h Change:</span> {coin.percent_change_24h}%
-      </p>
-      <p className="info">
-        <span>Market Cap (USD):</span> ${coin.market_cap_usd}
-      </p>
-      <p className="info">
-        <span>Circulating Supply:</span> {coin.csupply}
-      </p>
-      <p className="info">
-        <span>Total Supply:</span> {coin.tsupply}
       </p>
     </div>
   );

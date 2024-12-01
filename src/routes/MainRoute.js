@@ -6,7 +6,7 @@ import {useNavigate} from "react-router-dom";
 export const MainRoute=()=>{
         const[cryptoList, setcryptoList]=useState([]);
         useEffect(() => {
-            Axios.get("https://api.coinlore.net/api/tickers/?start=0&limit=20")
+            Axios.get("https://api.coinlore.net/api/tickers/?start=200&limit=100")
               .then((response) => {
                 setcryptoList(response.data["data"]);
               })

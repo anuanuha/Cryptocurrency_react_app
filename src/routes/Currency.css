@@ -1,0 +1,37 @@
+.container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 600px;
+    margin: 80px auto;
+    background-color: burlywood;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .info {
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .info span {
+    font-weight: bold;
+    color: #000;
+    font-size: 25px;
+  }
+  
+  .highlight {
+    color: #28a745;
+  }
+  
+  .negative {
+    color: #dc3545;
+  }
+  

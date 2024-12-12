@@ -6,7 +6,7 @@ import { Currency } from './routes/Currency';
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename='/Cryptocurrency_react_app'>
         <Routes>
           <Route path="/" element={<MainRoute />} />
           <Route path="/currency/:id" element={<Currency />} />
